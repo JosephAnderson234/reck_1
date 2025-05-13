@@ -19,8 +19,6 @@ public class OrderService {
 
         applicationEventPublisher.publishEvent(new OrderCreatedEvent(this, order));
 
-
-
         orderRepository.save(order);
 
     }

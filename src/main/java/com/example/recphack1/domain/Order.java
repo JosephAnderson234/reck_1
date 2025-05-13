@@ -20,7 +20,6 @@ public class Order {
     private String email;
 
     private String productName;
-    private List<String> productos;
 
     @OneToMany(mappedBy = "order")
     private List<Producto> products;
