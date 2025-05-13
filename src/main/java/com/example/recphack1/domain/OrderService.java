@@ -1,5 +1,6 @@
 package com.example.recphack1.domain;
 
+import com.example.recphack1.events.OrderCreatedEvent;
 import com.example.recphack1.infrastructure.OrderRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationEventPublisher;
@@ -16,13 +17,11 @@ public class OrderService {
 
     public void createOrder(Order order) {
 
-
+        applicationEventPublisher.publishEvent(new OrderCreatedEvent(this, order));
 
 
 
         orderRepository.save(order);
-
-
 
     }
 
