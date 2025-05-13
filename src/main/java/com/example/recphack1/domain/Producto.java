@@ -1,6 +1,7 @@
-package com.example.recphack1.user.domain;
+package com.example.recphack1.domain;
 
 import jakarta.persistence.*;
+import com.example.recphack1.domain.Order;
 
 @Entity
 public class Producto {
@@ -14,7 +15,7 @@ public class Producto {
     private Double price;
     private Integer stock;
 
-    @OneToMany(mappedBy = "products")
+    @ManyToOne
     private Order order;
 
 
