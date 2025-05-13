@@ -16,9 +16,23 @@ public class ProductService {
     public void eliminarProducto(List<Producto> productos){
 
         for (Producto producto : productos) {
-            productoRepository.delete(producto);
+
+            Producto productoExistente = productoRepository.findById(producto.getId()).orElse(null);
+            productoExistente.setStock(producto.getStock()-1);
+            productoRepository.save(productoExistente);
         }
 
+
+    }
+    public int eliminarProductoId(Long id){
+
+
+
+        Producto productoExistente = productoRepository.findById(id).orElse(null);
+        productoExistente.setStock(productoExistente.getStock()-1);
+        productoRepository.save(productoExistente);
+
+        return productoExistente.getStock();
 
     }
 

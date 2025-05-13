@@ -15,9 +15,8 @@ public class AuditLogListener {
     @Async
     @EventListener
     public void handleOrderCreated(OrderCreatedEvent event) {
-        log.info("📝 Registrando pedido en logs: ID={}, Email={}, Productos={}",
+        log.info("📝 Registrando pedido en logs: ID={}, Email={}",
                 event.getOrder().getId(),
-                event.getOrder().getEmail(),
-                event.getOrder().getProductos());
+                event.getOrder().getEmail());
     }
 }
