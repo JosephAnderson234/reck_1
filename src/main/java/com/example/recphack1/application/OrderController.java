@@ -1,4 +1,4 @@
-package com.example.recphack1.user.application;
+package com.example.recphack1.application;
 
 
 import org.springframework.web.bind.annotation.RequestMapping;

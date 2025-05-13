@@ -1,4 +1,4 @@
-package com.example.recphack1.user.domain;
+package com.example.recphack1.domain;
 
 
 import jakarta.persistence.Entity;
