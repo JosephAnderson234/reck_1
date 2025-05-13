@@ -22,7 +22,7 @@ public class InventoryUpdateListener {
 
         if (event.getOrder().getProducts() != null) {
             event.getOrder().getProducts().forEach(product -> {
-                log.info(product.getName() + " ahora tiene " + productService.eliminarProductoId(product.getId()) + " en stock");
+                log.info(product.getName() + " ahora tiene " + (product.getStock() - 1) + " en stock");
             });
         } else {
             log.warn("El pedido no contiene productos.");

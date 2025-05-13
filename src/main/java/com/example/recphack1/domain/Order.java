@@ -6,6 +6,7 @@ import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -20,9 +21,16 @@ public class Order {
 
     private String email;
 
-    private String productName;
-
     @OneToMany(mappedBy = "order")
     private List<Producto> products;
 
+
+    public void addProduct(Producto product) {
+        if (products == null) {
+            products = new ArrayList<>();
+        }
+
+        products.add(product);
+        product.setOrder(this);
+    }
 }
