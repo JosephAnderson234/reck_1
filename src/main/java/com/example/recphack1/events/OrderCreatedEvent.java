@@ -1,7 +1,9 @@
 package com.example.recphack1.events;
 
 import com.example.recphack1.domain.Order;
+import lombok.Data;
 import org.springframework.context.ApplicationEvent;
+
 
 public class OrderCreatedEvent extends ApplicationEvent {
 
