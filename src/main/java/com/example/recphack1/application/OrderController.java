@@ -19,8 +19,6 @@ public class OrderController {
     @Autowired
     private OrderService orderService;
 
-    @Autowired
-    ApplicationEventPublisher eventPublisher;
 
     @PostMapping
     public void createOrder(@RequestBody Order order) {
