@@ -1,6 +1,6 @@
 package com.example.recphack1.events.listeners;
 
-import com.example.eventosconwhereby.events.OrderCreatedEvent;
+import com.example.recphack1.events.OrderCreatedEvent;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.event.EventListener;
 import org.springframework.scheduling.annotation.Async;
