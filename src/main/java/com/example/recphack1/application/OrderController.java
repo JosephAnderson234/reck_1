@@ -25,9 +25,6 @@ public class OrderController {
     @PostMapping
     public void createOrder(@RequestBody Order order) {
 
-        eventPublisher.publishEvent(new OrderCreatedEvent(this, order));
-
-
         orderService.createOrder(order);
     }
 
